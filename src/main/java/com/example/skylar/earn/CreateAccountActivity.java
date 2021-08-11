@@ -89,6 +89,13 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(CreateAccountActivity.this, EarnActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
     private void addingPublicKey(String publicKey){
         reference.child("users").child(firebaseId).child("publicKey").setValue(publicKey);

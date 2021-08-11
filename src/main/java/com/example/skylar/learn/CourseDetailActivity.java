@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.skylar.R;
+import com.example.skylar.earn.AccountActivity;
+import com.example.skylar.earn.EarnActivity;
 import com.squareup.picasso.Picasso;
 
 public class CourseDetailActivity extends AppCompatActivity {
@@ -57,5 +59,12 @@ public class CourseDetailActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(CourseDetailActivity.this, CourseActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

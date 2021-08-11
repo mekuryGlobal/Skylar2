@@ -153,6 +153,13 @@ public class AccountActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(AccountActivity.this, EarnActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     private void getCurrencyData(String balance){
 
         runOnUiThread(new Runnable() {

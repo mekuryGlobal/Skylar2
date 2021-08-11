@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.skylar.MainMenuActivity;
 import com.example.skylar.R;
 import com.example.skylar.model.CourseModel;
 import com.example.skylar.model.CategoryRVAdapter;
@@ -54,6 +56,13 @@ public class CourseActivity extends AppCompatActivity implements CategoryRVAdapt
         getCategories();
         getContent("All");
         contentRVAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(CourseActivity.this, MainMenuActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void getCategories(){

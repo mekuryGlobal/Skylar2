@@ -121,7 +121,7 @@ public class QuizActivity extends AppCompatActivity {
         idExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizActivity.this, CourseActivity.class);
+                Intent intent = new Intent(QuizActivity.this, CourseDetailActivity.class);
                 startActivity(intent);
             }
         });

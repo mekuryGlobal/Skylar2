@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.skylar.earn.EarnActivity;
 import com.example.skylar.learn.AugmentedRealityActivity;
 import com.example.skylar.learn.CourseActivity;
+import com.example.skylar.learn.CourseDetailActivity;
 import com.example.skylar.learn.QuizActivity;
 import com.example.skylar.model.UserInformation;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,6 +51,11 @@ public class MainMenuActivity extends AppCompatActivity {
 
         gettingDatabase();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     public void profileClick(View view){
